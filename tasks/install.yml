@@ -1,9 +1,4 @@
 ---
-- name: OS is supported
-  ansible.builtin.meta: end_host
-  when:
-    - not __sshd_os_supported | bool
-
 - name: Check variables are safe for use for shell expansions and word splitting
   ansible.builtin.include_tasks: check_vars.yml
 
